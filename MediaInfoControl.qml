@@ -49,7 +49,7 @@ Item {
         anchors.topMargin: 23
         anchors.right: audioCount.left
         anchors.rightMargin: 10
-        source: "qrc:/Image/music.png"
+        source: "qrc:/Image_Low_Dpi/music.png"
     }
 
     Component {
@@ -140,10 +140,10 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             x: progressBar.leftPadding + progressBar.visualPosition * (progressBar.availableWidth - width)
             y: progressBar.topPadding + progressBar.availableHeight / 2 - height / 2
-            source: "qrc:/Image/point.png"
+            source: "qrc:/Image_Low_Dpi/point.png"
             Image {
                 anchors.centerIn: parent
-                source: "qrc:/Image/center_point.png"
+                source: "qrc:/Image_Low_Dpi/center_point.png"
             }
         }
         onMoved: {
@@ -168,8 +168,8 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 120
         anchors.left: currentTime.left
-        icon_off: "qrc:/Image/shuffle.png"
-        icon_on: "qrc:/Image/shuffle-1.png"
+        icon_off: "qrc:/Image_Low_Dpi/shuffle.png"
+        icon_on: "qrc:/Image_Low_Dpi/shuffle-1.png"
         status: player.playlist.playbackMode === Playlist.Random ? 1 : 0
         onClicked: {
             console.log(player.playlist.playbackMode)
@@ -185,9 +185,9 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 120
         anchors.right: play.left
-        icon_default: "qrc:/Image/prev.png"
-        icon_pressed: "qrc:/Image/hold-prev.png"
-        icon_released: "qrc:/Image/prev.png"
+        icon_default: "qrc:/Image_Low_Dpi/prev.png"
+        icon_pressed: "qrc:/Image_Low_Dpi/hold-prev.png"
+        icon_released: "qrc:/Image_Low_Dpi/prev.png"
         onClicked: {
             player.playlist.previous()
         }
@@ -196,9 +196,9 @@ Item {
         id: play
         anchors.verticalCenter: prev.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        icon_default: player.state == MediaPlayer.PlayingState ?  "qrc:/Image/pause.png" : "qrc:/Image/play.png"
-        icon_pressed: player.state == MediaPlayer.PlayingState ?  "qrc:/Image/hold-pause.png" : "qrc:/Image/hold-play.png"
-        icon_released: player.state== MediaPlayer.PlayingState ?  "qrc:/Image/pause.png" : "qrc:/Image/play.png"
+        icon_default: player.state == MediaPlayer.PlayingState ?  "qrc:/Image_Low_Dpi/pause.png" : "qrc:/Image/play.png"
+        icon_pressed: player.state == MediaPlayer.PlayingState ?  "qrc:/Image_Low_Dpi/hold-pause.png" : "qrc:/Image/hold-play.png"
+        icon_released: player.state== MediaPlayer.PlayingState ?  "qrc:/Image_Low_Dpi/pause.png" : "qrc:/Image/play.png"
         onClicked: {
             if (player.state != MediaPlayer.PlayingState){
                 player.play()
@@ -209,7 +209,7 @@ Item {
         Connections {
             target: player
             onStateChanged:{
-                play.source = player.state == MediaPlayer.PlayingState ?  "qrc:/Image/pause.png" : "qrc:/Image/play.png"
+                play.source = player.state == MediaPlayer.PlayingState ?  "qrc:/Image_Low_Dpi/pause.png" : "qrc:/Image/play.png"
             }
         }
     }
@@ -218,9 +218,9 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 120
         anchors.left: play.right
-        icon_default: "qrc:/Image/next.png"
-        icon_pressed: "qrc:/Image/hold-next.png"
-        icon_released: "qrc:/Image/next.png"
+        icon_default: "qrc:/Image_Low_Dpi/next.png"
+        icon_pressed: "qrc:/Image_Low_Dpi/hold-next.png"
+        icon_released: "qrc:/Image_Low_Dpi/next.png"
         onClicked: {
             player.playlist.next()
         }
@@ -230,8 +230,8 @@ Item {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 120
         anchors.right: totalTime.right
-        icon_on: "qrc:/Image/repeat1_hold.png"
-        icon_off: "qrc:/Image/repeat.png"
+        icon_on: "qrc:/Image_Low_Dpi/repeat1_hold.png"
+        icon_off: "qrc:/Image_Low_Dpi/repeat.png"
         status: player.playlist.playbackMode === Playlist.Loop ? 1 : 0
         onClicked: {
             console.log(player.playlist.playbackMode)

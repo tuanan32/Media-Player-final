@@ -5,14 +5,14 @@ Item {
     signal clickPlaylistButton
     Image {
         id: headerItem
-        source: "qrc:/Image/title.png"
+        source: "qrc:/Image_Low_Dpi/title.png"
         SwitchButton {
             id: playlist_button
             anchors.left: parent.left
             anchors.leftMargin: 20
             anchors.verticalCenter: parent.verticalCenter
-            icon_off: "qrc:/Image/drawer.png"
-            icon_on: "qrc:/Image/back.png"
+            icon_off: "qrc:/Image_Low_Dpi/drawer.png"
+            icon_on: "qrc:/Image_Low_Dpi/back.png"
             onClicked: {
 //                ...
             }
@@ -40,7 +40,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             width: 50
             height: 50
-            source: "qrc:/Image/vn.png"
+            source: "qrc:/Image_Low_Dpi/vn.png"
             Rectangle{
                 width: 50
                 height: 30
@@ -64,7 +64,7 @@ Item {
             anchors.verticalCenter: parent.verticalCenter
             width: 50
             height: 50
-            source: "qrc:/Image/us.png"
+            source: "qrc:/Image_Low_Dpi/us.png"
             Rectangle{
                 width: 50
                 height: 30

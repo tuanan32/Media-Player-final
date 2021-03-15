@@ -11,7 +11,7 @@ ApplicationWindow {
     Image {
         id: backgroud
         anchors.fill: parent
-        source: "qrc:/Image/background.png"
+        source: "qrc:/Image_Low_Dpi/background.png"
     }
     //Header
     AppHeader{
